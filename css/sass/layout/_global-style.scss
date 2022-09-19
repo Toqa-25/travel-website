@@ -1,0 +1,64 @@
+// import variables from sass/helper
+@use "../helpers/variables" as * ;
+// import variables from sass/helper
+@use "../helpers/mixins" as * ;
+
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top:9rem;
+    &::-webkit-scrollbar{
+        width:1rem;
+        background-color: $blue;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: $black;
+        // background-color: red;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $blue;
+        // background-color: red;
+    }
+    @include maxTap {
+        font-size:55%;
+    }
+ 
+    @media(max-width:450px){
+        font-size:50%;
+
+    }
+}
+body{
+    background-color: $black;
+    // overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    
+}
+section{
+    padding:3rem 9%;
+    margin-top:5rem;
+    @include maxTap {
+        padding:3rem 2rem;
+    }
+}
+
+::placeholder{
+    text-transform:capitalize;
+}

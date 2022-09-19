@@ -1,0 +1,52 @@
+// import variables from  ../helpers
+@use "./../helpers/variables" as * ;
+
+// import mixins from  ../helpers
+@use "./../helpers/mixins" as * ;
+
+.container{
+    width:90%;
+    margin:auto;
+}
+ul{
+    list-style:none;
+}
+.btn{
+    margin-top:1rem;
+    display:inline-block;
+    font-size:1.7rem;
+    color:$blue;
+    padding:1rem 3rem;
+    border:$border;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    background:none;
+    cursor:pointer;
+    a{
+        color:$blue;
+    }
+    &:hover{
+        color:$black;
+        background-color:$blue;
+        a{
+            color:$black;
+        }
+
+    }
+}
+.heading{
+    text-align:center;
+    margin-bottom:2rem;
+     span{
+        color:$blue;
+        font-size:2rem;
+     }
+     h1{
+        font-size:4rem;
+        color:$white;
+        // margin-top:.5rem;
+     }
+}

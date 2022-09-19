@@ -1,0 +1,101 @@
+// import variables from  ../helpers
+@use "./../helpers/variables" as * ;
+
+// import mixins from  ../helpers
+@use "./../helpers/mixins" as * ;
+
+header{
+    background-color: $bg-color;
+    color:$white;
+    padding:1.5rem 9%;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    z-index: 5000;
+    .header-content{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        .logo{
+            font-size:2.5rem;
+            color:$white;
+            .logo-link{
+                color:$white;
+                .fa-paper-plane{
+                    color:$blue;
+                }
+            }
+        }
+        .nav-items{
+            ul{
+                display:flex;
+                justify-content: space-between;
+                align-items:center;
+                width:100%;
+                li{                   
+                    a{
+                       font-size:1.8rem;
+                       color:$light-color;
+                        margin : 0 1rem;
+                        display:block;
+                       &:hover{
+                           color:$blue
+                       }
+                   }
+                   &.active a{
+                   color:$blue
+                       
+                   }
+                }
+            }
+
+        }
+        .btn{
+            margin-top:0;
+        }
+        .manu-button{
+            font-size:2.5rem;
+            color:$white;
+            display:none;
+            cursor:pointer;
+       
+        }
+    }
+
+}
+@include maxMobile{
+    header{
+        padding:1.5rem 2rem; 
+        .header-content{
+            .nav-items{
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);   
+                position:absolute;
+                top:64px;
+                left:0;
+                width:100%;
+                z-index:1000;
+                background-color:$bg-color;
+                    ul{
+                        flex-direction:column;
+                        width:90%;
+                        margin:auto;
+                        li{
+                            width:100%;
+                                a{
+                                    margin : 2rem;
+                                    font-size:2rem;
+                                    display:block;
+                                }
+                        }
+                    }
+                &.active{
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                       }
+                }
+        .manu-button{
+                display:block;
+            }
+        }
+    }
+}

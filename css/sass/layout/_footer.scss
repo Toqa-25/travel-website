@@ -1,0 +1,133 @@
+// import variables from  ../helpers
+@use "./../helpers/variables" as * ;
+
+// import mixins from  ../helpers
+@use "./../helpers/mixins" as * ;
+
+footer{
+    background-color: $black;
+    color:$white;
+    padding:1.5rem 9%;
+    .footer-content{
+        @include grid(25rem);
+        .footer-element{
+           padding: 1rem 0 ;
+           h3{
+               font-size:2.2rem;
+               padding: 1rem 0 ;
+               color:$white;
+            
+           }
+           p{
+               font-size:1.4rem;
+               padding: 1rem 0 ;
+               color:$light-color;
+               line-height:2;           
+           }
+           .fa-solid{
+            color:$blue;
+            padding-right:.5rem;
+            }
+        }
+        .first-group{
+            .logo{
+                font-size:2.5rem;
+                color:$white;
+                padding-bottom: 1rem;
+                .logo-link{
+                    color:$white;
+                    .fa-paper-plane{
+                        color:$blue;
+                    }
+                }
+                }
+            ul{
+                padding-top:1rem;
+                display: flex;
+                li{                   
+                    margin-right :  .7rem;
+                    a{
+                       font-size:1.7rem;
+                       color:$blue;
+                        background-color:none;
+                        border:$border;
+                        border-radius:50%;
+                        width: 4rem;
+                        height: 4rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                       &:hover{
+                        color:$black;
+                        background-color:$blue;
+                       }
+                     }
+                  }
+              }
+        
+        }
+        .second-group{         
+            ul{
+                li{                   
+                    a{
+                       font-size:1.4rem;
+                       color:$light-color;
+                        padding:1rem 0;
+                        display:block;
+                       &:hover{
+                           color:$blue;
+                           .fa-arrow-right{
+                               padding-right:2rem;
+                            }
+                        }
+                    }
+                    .fa-arrow-right{
+                        color:$blue;
+                     padding-right:.5rem;
+                    }
+                  
+                }
+            }
+
+        }
+        .third-group{
+            li{               
+               font-size:1.4rem;
+               padding: 1rem 0 ;
+               color:$light-color;
+               line-height:2;
+            }
+        }
+        form .email{
+            width:100%;
+            border:$border;
+            border-radius:5rem;
+            background:none;
+            font-size:1.5rem;
+            text-transform:none;
+            color:$light-color;
+            margin-bottom:1rem;
+            padding:1.2rem 1.4rem;
+        }
+    }
+}
+.copywrite{
+    background:$bg-color;
+    color:$light-color;
+    font-size:1.5rem;
+    padding: 2rem 1rem;
+    text-align:center;
+    a{
+        color:$blue;
+    }
+}
+
+@include maxMobile{
+    footer{
+        padding:1.5rem 2rem; 
+        .footer-content{
+            // flex-direction:column;
+        }
+     
+   }
+}

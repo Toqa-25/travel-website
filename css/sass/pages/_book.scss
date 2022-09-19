@@ -1,0 +1,64 @@
+// import variables from  ../helpers
+@use "./../helpers/variables" as * ;
+
+// import mixins from  ../helpers
+@use "./../helpers/mixins" as * ;
+
+
+.book{
+    // background-color: $black;
+    .book-form{
+        margin:3rem auto;
+        background-color: $black-bg;
+        background-color: $bg-color;
+        border-radius:1rem;
+        box-shadow :.5rem 1rem rgba(17,17,17,.3);        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap:wrap;
+        gap:1.5rem;
+        max-width:500px;
+        padding:1.2rem 1.4rem;
+        .book-form-item {
+            // flex: 1 1 ;
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap:wrap;
+            gap:1.5rem;
+            span{
+                color:$light-color;
+            }
+                font-size:1.4rem;
+            input{
+                width:70%;
+                padding:1.2rem 1.4rem;
+                border-radius:5rem;
+                border:$border;
+                font-size:1.4rem;
+                color:$light-color;
+                text-transform:none;
+            }
+        }
+        .submit-btn{
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            input.btn{
+                width:200px;
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+            &:hover{
+                input{
+                    color:$black;
+                }
+            }
+        }
+
+
+    }
+}

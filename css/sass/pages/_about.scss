@@ -1,0 +1,197 @@
+// import variables from  ../helpers
+@use "./../helpers/variables" as * ;
+
+// import mixins from  ../helpers
+@use "./../helpers/mixins" as * ;
+
+.about{
+    .about-content{
+        display: flex;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:2rem;
+        margin-bottom:5rem;
+        .video{
+            flex:1 1 42rem;
+            border-radius:1rem;        ;
+            -webkit-border-radius:1rem        ;
+            -moz-border-radius:1rem        ;
+            -ms-border-radius:1rem        ;
+            -o-border-radius:1rem        ;
+            width:100%;
+            video{
+                max-width:100%;
+
+            }
+            .video-control{
+                display: flex;
+                align-items:center;
+                justify-content:center;
+                gap:1rem; 
+                margin-top:1rem;
+                span{
+                    width:1.5rem;
+                    height:1.5rem;
+                    border-radius:50%                ;
+                    -webkit-border-radius:50%                ;
+                    -moz-border-radius:50%                ;
+                    -ms-border-radius:50%                ;
+                    -o-border-radius:50%                ;
+                    background-color:$light-color;
+                    cursor:pointer;
+                    &:hover{
+                       background-color:$blue;
+                    }
+                    &.active{
+                        background-color:$blue;
+                    }
+             }
+            }
+        }
+        .info{
+            flex:1 1 42rem;
+            margin-bottom:5rem;
+            // margin-top:5rem;
+
+            span{
+                color:$blue;
+                font-size:2rem;
+            }
+            h3{
+                color:$white;
+                font-size:4rem;
+                margin-top:.5rem;
+            }
+            p{
+                padding:1rem;
+                font-size:1.4rem;
+                color:$light-color;
+                line-height: 2;
+            }
+            p.more-text{
+              display:none;
+            }  
+            .more-text.show{
+              display:block;
+            }  
+            .show-more-btn {
+                cursor: pointer;
+                font-size: 1.5rem;
+                color: $blue;
+                font-weight:bold;
+            }
+            
+        }
+    }
+
+}
+.gallery{
+    .gallery-box{
+        columns : 3 25rem;
+        column-gap:1.5rem;
+        .gallery-box-item{
+            margin-bottom:1rem;
+            break-inside:avoid;
+            img{
+                width:100%;
+                margin-bottom:1rem;
+                border-radius:1rem;
+                -webkit-border-radius:1rem;
+                -moz-border-radius:1rem;
+                -ms-border-radius:1rem;
+                -o-border-radius:1rem;
+            }
+            span{
+                font-size:1.4rem;
+                color:$light-color;
+            }
+            h3{
+                margin-top:.5rem;
+                font-size:2rem;
+                color:$white;
+            }
+        }
+    }
+}
+
+.review{
+    display:flex;
+    align-items:center; 
+    flex-wrap:wrap;
+    gap:2rem;
+    .content{
+        flex: 1 1 42rem;
+        span{
+            font-size:2rem;
+            color:$blue; 
+        }
+        h3{
+            font-size:3rem;
+            color:$white;
+        }
+        p{
+            font-size: 1.4rem;
+            color:$light-color;
+            padding:1rem 0;
+            line-height:2;
+        }
+    }
+    .box{
+    flex: 1 1 42rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+
+    .box-item{
+        flex:  1 1 20rem;
+        border-radius:1rem    ;
+        -webkit-border-radius:1rem    ;
+        -moz-border-radius:1rem    ;
+        -ms-border-radius:1rem    ;
+        -o-border-radius:1rem    ;
+        background-color:$bg-color;
+        padding:2rem;
+        border: .2rem solid $black;
+        &:hover{
+            border:$border;
+        }
+        p{
+            font-size:1.4rem;
+            padding-bottom:1rem;
+            line-height:2;
+            color:$light-color;
+        }
+        .user{
+            display:flex;
+            align-items:center;
+            gap:1rem;
+            img{
+            height:5rem;
+            width:5rem;
+            border-radius:50%;
+              }
+              h3{
+                font-size:1.7rem;
+                color:$white;
+              }
+              span{
+                color:$light-color;
+                font-size:1.5rem;
+              }          
+            }
+    }
+}
+}
+@media (max-width:450px){
+    .about{
+        .about-content{
+            .info{
+                h3{
+                    font-size:3rem;
+                }
+                
+            }
+        }
+    
+    }
+}

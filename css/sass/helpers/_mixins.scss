@@ -1,0 +1,52 @@
+@mixin maxMobile{
+    @media (max-width: 786px){
+        @content;
+    }
+}
+@mixin middleMobile{
+    @media (max-width: 575px){
+        @content;
+    }
+}
+@mixin smallMobile{
+    @media (max-width: 575px){
+        @content;
+    }
+}
+@mixin minTab {
+    @media (min-width:768px){
+        @content;
+    }
+}
+@mixin maxTap {
+    @media (max-width:991px){
+        @content;
+    }
+}
+
+@mixin minlab {
+    @media (min-width:992px){
+        @content;
+    }
+}
+@mixin middlelab {
+    @media (min-width:1200px){
+        @content;
+    }
+}
+
+// mixin overlay
+@mixin overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+}
+
+// mixin 25rem
+@mixin grid($size){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($size , 1fr));
+    gap: 1.5rem;
+}

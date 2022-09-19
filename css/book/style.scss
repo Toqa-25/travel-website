@@ -1,0 +1,14 @@
+// import global-style from sass/layout
+@use "./../sass/layout/global-style" ;
+
+// import components from sass/components
+@use "./../sass/components/components" as * ;
+
+
+// import header from sass/layout
+@use "./../sass/layout/header" ;
+
+// import homePage from sass/pages
+@use "./../sass/pages/book" ;
+
+@use "./../sass/layout/footer" ;

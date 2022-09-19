@@ -1,0 +1,54 @@
+.home {
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url("../../../images/home-bg.jpg") no-repeat;
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url("../../../images/home-bg.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 5rem;
+}
+.home .home-content {
+  text-align: center;
+}
+.home .home-content span {
+  font-size: 4vw;
+  font-weight: bolder;
+  color: transparent;
+  -webkit-text-stroke: 0.1rem #29d9d5;
+  display: block;
+}
+.home .home-content h3 {
+  font-size: 6vw;
+  color: #fff;
+  margin: 1rem 0;
+}
+.home .home-content p {
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: #aaa;
+  line-height: 2;
+}
+
+@media (max-width: 786px) {
+  .home {
+    margin-top: 10rem;
+  }
+  .home .home-content span {
+    font-size: 8vw;
+  }
+  .home .home-content h3 {
+    font-size: 9vw;
+  }
+}

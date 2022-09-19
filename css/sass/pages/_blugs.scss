@@ -1,0 +1,116 @@
+// import variables from  ../helpers
+@use "./../helpers/variables" as * ;
+
+// import mixins from  ../helpers
+@use "./../helpers/mixins" as * ;
+
+.blogs{
+
+    .blogs-box{
+        @include grid(32rem) ;
+
+        .box-item{
+            background-color:$bg-color;
+            overflow:hidden;
+            border-radius: 1rem ;
+            -webkit-border-radius: 1rem ;
+            -moz-border-radius: 1rem ;
+            -ms-border-radius: 1rem ;
+            -o-border-radius: 1rem ;
+            .box-image{
+                height:25rem;
+                width:100%;
+                overflow:hidden;
+                img{
+                    width:100%;
+                    height:100%;
+                    object-fit:cover;
+                }
+                &:hover img{
+                    transform:scale(1.1)                ;
+                    -webkit-transform:scale()                ;
+                    -moz-transform:scale()                ;
+                    -ms-transform:scale()                ;
+                    -o-transform:scale()                ;
+                }
+            }
+            .box-content{
+                padding:2rem;
+                &> a{
+                    font-size:2rem;
+                    color:$white;
+                    
+                    &:hover{
+                        color:$blue;
+
+                    }
+                }
+                p{
+                    padding:1rem 0;
+                    font-size:1.4rem;
+                    color:$light-color;
+                    line-height: 2;
+                }
+                .box-icon{
+                    padding-top:1rem;
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    a{
+                        font-size:1.4rem;
+                        color:$light-color;
+
+                        &:hover{
+                            color:$blue;
+                        }
+                        .fa-solid{
+                            padding-right:.5rem;
+                            color:$blue;
+                        }
+                    }
+                }
+            }
+      }
+    }
+
+
+}
+
+.banner{
+    background:linear-gradient($black-bg, $black-bg), url("../../../images/banner-bg.jpg") no-repeat ;
+    background-position:center ;
+    background-size:cover ;
+    padding:3rem 2rem ;
+    background-attachment: fixed;
+    text-align:center;
+
+  .content{
+    span{
+        font-size:2rem;
+        color:$blue;
+    }
+    h3{
+        font-size:2rem;
+        color:$white;
+        margin-top:1rem;
+    }
+    p{
+        max-width:60rem;
+        margin:1rem auto;
+        font-size:1.4rem;
+        color:$light-color;
+        line-height: 2;
+    }
+
+  }
+}
+
+@media (max-width:450px){
+    .banner{
+       .content{
+        h3{
+            font-size:2.7rem;
+        }
+       }  
+    }
+}

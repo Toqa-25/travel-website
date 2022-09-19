@@ -1,0 +1,58 @@
+// import variables from helpers/variables
+@use "./../helpers/variables" as *;
+
+// import mixins from helpers/mixins
+@use "./../helpers/mixins"  as *;
+
+.home{
+ margin :0 auto;
+ margin-top:4rem;
+ border-radius: 1rem;
+ background:linear-gradient($black-bg, $black-bg), url("../../../images/home-bg.jpg") no-repeat ;
+ background-position:center ;
+ background-size:cover ;
+ min-height:80vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ padding-bottom:5rem;
+ .home-content{
+    text-align:center;
+    span{
+        font: {
+            size:4vw;
+            weight:bolder;
+        }
+        color: transparent;
+        -webkit-text-stroke: .1rem  $blue;
+        display:block;
+    }
+    h3{
+        font-size:6vw;
+        color:$white;
+        margin:1rem 0;
+    }
+    p{
+        max-width:60rem;
+        margin:1rem auto;
+        font-size:1.4rem;
+        color:$light-color;
+        line-height: 2;
+    }
+ }
+}
+
+@include maxMobile{
+    .home{
+        margin-top:10rem;
+        .home-content{
+            span{
+                font-size: 8vw;
+            }
+            h3{
+            font-size: 9vw;
+            }
+        }
+    }
+}
+
