@@ -3,4 +3,7 @@
  It is 5 pages in responsive design for all screens.
  in this design we used AOS liberary to make it more dynamic and more attractive.
 you can check it from this linke :
-https://toqa-25.github.io/travel-website/index.html
+https://toqa-25.github.io/travel-website/index.html.
+
+video's link in my youtube channel :
+https://youtu.be/KD5m01iRJ8M 
